@@ -1,0 +1,214 @@
+@import url('../Header.css');
+
+.privacy-page {
+  position: relative;
+  padding: 120px 0;
+  background: #FFFFFF;
+  overflow: hidden;
+  min-height: 100vh;
+}
+
+.privacy-page__bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+}
+
+.privacy-page__bg-line {
+  position: absolute;
+  background: var(--emerald-glow);
+}
+
+.privacy-page__bg-line--vertical {
+  top: 0;
+  bottom: 0;
+  left: 30%;
+  width: 1px;
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    var(--emerald-glow),
+    transparent
+  );
+}
+
+.privacy-page__bg-line--horizontal {
+  left: 0;
+  right: 0;
+  top: 30%;
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    var(--gold-glow),
+    transparent
+  );
+}
+
+.privacy-page__container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 40px;
+  position: relative;
+  z-index: 1;
+}
+
+/* Заголовок */
+.privacy-page__header {
+  text-align: left;
+  margin-bottom: 60px;
+}
+
+.privacy-page__tag {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--gold-primary);
+  margin-bottom: 16px;
+}
+
+.privacy-page__title {
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 1.1;
+  color: var(--emerald-base);
+  margin: 0 0 16px 0;
+  letter-spacing: -1px;
+  text-align: left;
+}
+
+.privacy-page__subtitle {
+  font-size: 16px;
+  color: var(--emerald-secondary);
+  opacity: 0.7;
+  margin: 0;
+  text-align: left;
+}
+
+/* Контент */
+.privacy-page__content {
+  background: white;
+  border: 1px solid var(--emerald-glow);
+  border-radius: var(--border-radius-md);
+  padding: 50px;
+}
+
+.privacy-page__section {
+  margin-bottom: 40px;
+}
+
+.privacy-page__section:last-child {
+  margin-bottom: 0;
+}
+
+.privacy-page__section-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--emerald-base);
+  margin: 0 0 20px 0;
+  letter-spacing: 1px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--emerald-glow);
+}
+
+.privacy-page__text {
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--emerald-secondary);
+  margin: 0 0 15px 0;
+}
+
+.privacy-page__text:last-child {
+  margin-bottom: 0;
+}
+
+.privacy-page__list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 15px 0;
+}
+
+.privacy-page__list-item {
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--emerald-secondary);
+  margin: 0 0 10px 0;
+  padding-left: 20px;
+  position: relative;
+}
+
+.privacy-page__list-item::before {
+  content: '—';
+  position: absolute;
+  left: 0;
+  color: var(--gold-primary);
+}
+
+/* Адаптивность */
+@media (max-width: 992px) {
+  .privacy-page {
+    padding: 100px 0;
+  }
+  
+  .privacy-page__container {
+    padding: 0 32px;
+  }
+  
+  .privacy-page__title {
+    font-size: 48px;
+  }
+  
+  .privacy-page__content {
+    padding: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .privacy-page__title {
+    font-size: 40px;
+  }
+  
+  .privacy-page__content {
+    padding: 30px;
+  }
+  
+  .privacy-page__section-title {
+    font-size: 18px;
+  }
+  
+  .privacy-page__text,
+  .privacy-page__list-item {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 576px) {
+  .privacy-page {
+    padding: 80px 0;
+  }
+  
+  .privacy-page__container {
+    padding: 0 20px;
+  }
+  
+  .privacy-page__title {
+    font-size: 32px;
+  }
+  
+  .privacy-page__subtitle {
+    font-size: 14px;
+  }
+  
+  .privacy-page__content {
+    padding: 25px;
+  }
+  
+  .privacy-page__section-title {
+    font-size: 16px;
+  }
+}

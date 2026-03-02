@@ -1,0 +1,440 @@
+@import url('../Header.css');
+
+.about-page {
+  position: relative;
+  padding: 120px 0;
+  background: #FFFFFF;
+  overflow: hidden;
+  min-height: 100vh;
+}
+
+.about-page__bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+}
+
+.about-page__bg-line {
+  position: absolute;
+  background: var(--emerald-glow);
+}
+
+.about-page__bg-line--vertical {
+  top: 0;
+  bottom: 0;
+  left: 30%;
+  width: 1px;
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    var(--emerald-glow),
+    transparent
+  );
+}
+
+.about-page__bg-line--horizontal {
+  left: 0;
+  right: 0;
+  top: 30%;
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    var(--gold-glow),
+    transparent
+  );
+}
+
+.about-page__container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 40px;
+  position: relative;
+  z-index: 1;
+}
+
+.about-page__header {
+  text-align: left;
+  margin-bottom: 60px;
+}
+
+.about-page__tag {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--gold-primary);
+  margin-bottom: 16px;
+}
+
+.about-page__title {
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 1;
+  color: var(--emerald-base);
+  margin: 0 0 16px 0;
+  letter-spacing: -1px;
+  text-align: left;
+}
+
+.about-page__subtitle {
+  font-size: 18px;
+  color: var(--emerald-secondary);
+  opacity: 0.7;
+  margin: 0;
+  text-align: left;
+}
+
+.about-page__description {
+  margin-bottom: 60px;
+  max-width: 800px;
+  padding-left: 20px;
+  border-left: 2px solid var(--gold-primary);
+}
+
+.about-page__description p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: var(--emerald-base);
+  margin: 0 0 20px 0;
+  opacity: 0.8;
+}
+
+.about-page__description p strong {
+  color: var(--emerald-base);
+  opacity: 1;
+  font-weight: 700;
+}
+
+.about-page__stats {
+  display: flex;
+  justify-content: flex-start;
+  gap: 60px;
+  margin-bottom: 80px;
+  padding: 30px 0;
+}
+
+.about-page__stat-item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.about-page__stat-number {
+  font-size: 48px;
+  font-weight: 700;
+  color: var(--emerald-base);
+  font-family: 'Monaco', 'Consolas', monospace;
+  line-height: 1;
+  margin-bottom: 5px;
+}
+
+.about-page__stat-label {
+  font-size: 14px;
+  color: var(--emerald-secondary);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  opacity: 0.7;
+}
+
+.about-page__principles {
+  margin-bottom: 80px;
+}
+
+.about-page__principles-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.about-page__principle-card {
+  background: white;
+  border: 1px solid var(--emerald-glow);
+  border-radius: var(--border-radius-md);
+  padding: 30px;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  position: relative;
+  overflow: hidden;
+}
+
+.about-page__principle-card:hover {
+  border-color: var(--gold-primary);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.about-page__principle-number {
+  font-size: 14px;
+  font-weight: 600;
+  font-family: 'Monaco', 'Consolas', monospace;
+  color: var(--gold-primary);
+  opacity: 0.7;
+  margin-bottom: 5px;
+}
+
+.about-page__principle-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--emerald-base);
+  margin: 0;
+  line-height: 1.3;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.about-page__principle-text {
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--emerald-secondary);
+  margin: 0 0 10px 0;
+  opacity: 0.7;
+}
+
+.about-page__principle-line {
+  width: 40px;
+  height: 2px;
+  background: var(--gold-primary);
+  transition: width 0.3s ease;
+  margin-top: 5px;
+}
+
+.about-page__principle-card:hover .about-page__principle-line {
+  width: 60px;
+}
+
+.about-page__catalog {
+  margin-top: 40px;
+  padding-top: 40px;
+  border-top: 1px solid var(--emerald-glow);
+  display: flex;
+  justify-content: flex-start;
+}
+
+.about-page__catalog-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 24px;
+  background: transparent;
+  color: var(--emerald-base);
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border: 1px solid var(--emerald-base);
+  border-radius: var(--border-radius-md);
+  transition: all 0.3s ease;
+}
+
+.about-page__catalog-link:hover {
+  background: var(--emerald-base);
+  color: white;
+  gap: 15px;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
+}
+
+.about-page__catalog-arrow {
+  font-size: 18px;
+  transition: transform 0.3s ease;
+}
+
+.about-page__catalog-link:hover .about-page__catalog-arrow {
+  transform: translateX(5px);
+}
+
+@media (max-width: 1200px) {
+  .about-page__principles-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .about-page__title {
+    font-size: 48px;
+  }
+  
+  .about-page__stats {
+    flex-wrap: wrap;
+    gap: 40px;
+  }
+}
+
+@media (max-width: 992px) {
+  .about-page {
+    padding: 100px 0;
+  }
+  
+  .about-page__container {
+    padding: 0 32px;
+  }
+  
+  .about-page__title {
+    font-size: 42px;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-page__principles-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .about-page__title {
+    font-size: 36px;
+  }
+  
+  .about-page__subtitle {
+    font-size: 16px;
+  }
+  
+  .about-page__description p {
+    font-size: 16px;
+  }
+  
+  .about-page__stats {
+    flex-direction: column;
+    gap: 30px;
+  }
+  
+  .about-page__stat-number {
+    font-size: 42px;
+  }
+  
+  .about-page__catalog-link {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 576px) {
+  .about-page {
+    padding: 80px 0;
+  }
+  
+  .about-page__container {
+    padding: 0 20px;
+  }
+  
+  .about-page__title {
+    font-size: 32px;
+  }
+  
+  .about-page__subtitle {
+    font-size: 14px;
+  }
+  
+  .about-page__description {
+    padding-left: 15px;
+  }
+  
+  .about-page__stat-number {
+    font-size: 38px;
+  }
+  
+  .about-page__principle-card {
+    padding: 25px;
+  }
+  
+  .about-page__catalog-link {
+    padding: 12px 20px;
+    font-size: 13px;
+  }
+}
+.about-page__brands {
+  margin-bottom: 80px;
+}
+
+.about-page__brands-loading {
+  display: flex;
+  justify-content: center;
+  padding: 40px;
+}
+
+.about-page__brands-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2px;
+  margin-bottom: 30px;
+  background: var(--emerald-glow);
+  border: 1px solid var(--emerald-glow);
+  border-radius: var(--border-radius-md);
+  overflow: hidden;
+}
+
+.about-page__brand-card {
+  background: white;
+  padding: 30px 20px;
+  text-align: center;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.about-page__brand-card:hover {
+  background: var(--emerald-light);
+}
+
+.about-page__brand-name {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--emerald-base);
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.about-page__brand-country {
+  font-size: 13px;
+  color: var(--emerald-secondary);
+  margin: 0;
+  opacity: 0.7;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.about-page__brands-more {
+  display: flex;
+  justify-content: center;
+}
+
+.about-page__brands-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  background: transparent;
+  color: var(--emerald-base);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border: 1px solid var(--emerald-glow);
+  border-radius: var(--border-radius-md);
+  transition: all 0.3s ease;
+}
+
+.about-page__brands-link:hover {
+  background: var(--emerald-base);
+  color: white;
+  gap: 12px;
+  border-color: var(--emerald-base);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
+}
+
+.about-page__brands-arrow {
+  font-size: 16px;
+  transition: transform 0.3s ease;
+}
+
+.about-page__brands-link:hover .about-page__brands-arrow {
+  transform: translateX(5px);
+}
